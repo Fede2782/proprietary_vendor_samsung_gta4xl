@@ -100,7 +100,6 @@ jobs:
         run: |
           for file in $FILES; do tar xvf ${{ env.ap_tar }} ${file}; done
           tar cvf ${{ env.latest_shortversion }}_kernel.tar *.lz4
-          unlz4 boot.img.lz4
           rm *.lz4
 
       - name: Extract PIT file
