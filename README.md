@@ -1,5 +1,5 @@
-# proprietary_vendor_samsung_a34x
-Samsung Galaxy A34 5G firmware binaries.
+# proprietary_vendor_samsung_gta4xl
+Samsung Galaxy Tab S6 Lite LTE 2020 firmware binaries.
 
 ### Credits
 - [@BlackMesa123](https://github.com/BlackMesa123)
