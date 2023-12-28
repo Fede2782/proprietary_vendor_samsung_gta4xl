@@ -6,9 +6,6 @@ on:
     - cron: "0 12 * * *"
   push:
 
-env:
-  IMEI: 355579426295626
-  
 
 jobs:
   update:
@@ -22,6 +19,7 @@ jobs:
           - model: "SM-P615"
             csc: "XEF"
             omc: "OXM"
+            imei: 355579426295626
 
     steps:
       - name: Checkout repo
@@ -66,7 +64,7 @@ jobs:
       - name: Fetch firmware
         if: env.need_update == 1
         run:
-          samfirm -m ${{ matrix.model }} -r ${{ matrix.region }} -i ${{ env.IMEI }}
+          samfirm -m ${{ matrix.model }} -r ${{ matrix.csc }} -i ${{ matrix.imei }}
           
       - name: Get path of files
         if: env.need_update == 1
